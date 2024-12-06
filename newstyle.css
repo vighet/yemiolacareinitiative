@@ -188,24 +188,14 @@ button {
     border: none;
     cursor: pointer;
   }
-.gallery {
-  display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent items from wrapping */
-  padding: 20px;
-}
-
-.gallery img {
-  width: 200px;
-  height: auto;
-  margin-right: 20px;
-  border: 1px solid #ccc;
-  display: inline-block; /* Make each image an inline block */
-}
-
-/* Optional styles for responsiveness */
-@media (max-width: 768px) {
-  .gallery img {
-    width: 150px;
+  .gallery {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping */
   }
-}
+  .gallery img {
+    display: inline-block;
+    width: 300px; /* Adjust image width as needed */
+    height: auto;
+    margin: 10px;
+  }
