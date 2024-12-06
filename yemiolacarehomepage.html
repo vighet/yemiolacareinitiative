@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Yemi Ola Care Initiative</title>
+    <link rel="stylesheet" href="/newstyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blogs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Yemi Ola Care Initiative</h1>
+            <p>We help those in need...</p>
+            <div id="location-weather"></div> 
+            <div id="adsense-container"></div>  </section>
+
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Our mission and values...</p>
+        </section>
+
+        <section id="donate">
+            <div class="container">
+                <h2>Donation Form</h2>
+                <p>Your generosity makes a difference...</p>
+                <form action="/submit_donation" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="amount">Donation Amount:</label>
+                    <input type="number" id="amount" name="amount" min="1" step="0.01" required>
+                
+                    <label for="message">Message (Optional):</label>
+                    <textarea id="message" name="message"></textarea>
+                
+                    <button type="submit">Donate Now</button>
+                </form>
+            </div>
+            </section>
+
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div id="image-gallery"></div>
+            <div class="gallery">
+                <div class="gallery-item">
+                  <img src="image1.jpg" alt="Image 1">
+                  <div class="caption">Image 1 Caption</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="image2.jpg" alt="Image 2">
+                  <div class="caption">Image 2 Caption</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="image3.jpg" alt="Image 3">
+                  <div class="caption">Image 3 Caption</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image4.jpg" alt="Image 4">
+                    <div class="caption">Image 4 Caption</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image5.jpg" alt="Image 5">
+                    <div class="caption">Image 5 Caption</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image6.jpg" alt="Image 6">
+                    <div class="caption">Image 6 Caption</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image7.jpg" alt="Image 7">
+                    <div class="caption">Image 7 Caption</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image8.jpg" alt="Image 8">
+                    <div class="caption">Image 8 Caption</div>
+                </div>
+                <!-- Add more gallery items as needed -->
+              </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div id="testimonial-slider"></div>
+        </section>
+
+        <section id="blog">
+            <h2>Blog Posts</h2>
+            <div id="blog-posts"></div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us...</p>
+                <form action="/submit" method="post">  
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+              
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+              
+                  <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Yemi Ola Care Initiative</p>
+        <div id="current-datetime"></div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
