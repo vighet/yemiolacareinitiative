@@ -188,43 +188,24 @@ button {
     border: none;
     cursor: pointer;
   }
-  
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-  grid-gap: 10px;
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent items from wrapping */
   padding: 20px;
 }
 
-.gallery-item {
-  border: 1px solid #ddd;
-  overflow: hidden;
-  position: relative; /* Needed for image captions */
-}
-
-.gallery-item img {
-  width: 100%;
+.gallery img {
+  width: 200px;
   height: auto;
-  display: block; /* Prevents a small space below the image */
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  display: inline-block; /* Make each image an inline block */
 }
 
-.gallery-item:hover img {
-  transform: scale(1.1); /* Zoom on hover */
-}
-
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-  color: white;
-  padding: 5px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover .caption {
-  opacity: 1;
+/* Optional styles for responsiveness */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 150px;
+  }
 }
