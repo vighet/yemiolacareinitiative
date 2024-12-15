@@ -43,17 +43,83 @@ header h1 {
   margin-bottom: 10px;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* toggle nav bar for responsiveness */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 15px;
+.navbar-brand {
+    font-weight: bold;
 }
 
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+.navbar-toggler-icon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.navbar-collapse {
+    display: flex;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block; /* Show on mobile */
+    }
+
+    .navbar-collapse {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0;
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show when toggled */
+    }
+}
 
 /* Hero Section Styles */
 #hero {
